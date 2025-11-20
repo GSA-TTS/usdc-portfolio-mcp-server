@@ -1,6 +1,6 @@
-from fastmcp import Client, FastMCP
+from fastmcp import FastMCP
 
-def mount_servers(mcp, servers_config=None):
+def mount_servers(mcp):
     """
     Mount MCP servers from a JSON configuration file.
     
@@ -12,16 +12,18 @@ def mount_servers(mcp, servers_config=None):
         The mcp instance with mounted servers
     """
 
-    if servers_config is None:
-        servers_config = [
-            {
-                "prefix": "reporter",
-                "url": "https://nih-reporter-mcp-server-relaxed-bilby-co.app.cloud.gov/mcp"
+    config = {
+        "mcpServers": {
+            "reporter": {
+                "url": "https://nih-reporter-mcp-server-relaxed-bilby-co.app.cloud.gov/mcp",
+                "transport": "http"
             },
-        ]
+        }
+    }
+
+    composite_proxy = FastMCP.as_proxy(config, name="Composite Proxy")
+    mcp.mount(composite_proxy)
+
     
-    for server in servers_config:
-        proxy = FastMCP.as_proxy(Client(server['url']))
-        mcp.mount(proxy, prefix=server['prefix'])
     
     return mcp
