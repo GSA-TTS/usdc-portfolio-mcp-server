@@ -1,0 +1,6 @@
+# ignore virtual environment 
+.venv/
+
+# ignore build artifacts 
+src/usdc_portfolio_mcp_server.egg-info/
+src/portfolio/__pycache__/
