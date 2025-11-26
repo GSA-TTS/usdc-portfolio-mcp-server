@@ -18,6 +18,10 @@ def mount_servers(mcp):
                 "url": "https://nih-reporter-mcp-server-relaxed-bilby-co.app.cloud.gov/mcp",
                 "transport": "http"
             },
+            "usa-spending": {
+                "url": "https://usa-spending-grants-mcp-server-responsive-reedbuck-xa.app.cloud.gov/mcp", 
+                "transport": "http"
+            }
         }
     }
 
