@@ -19,7 +19,7 @@ def mount_servers(mcp):
                 "transport": "http"
             },
             "usa-spending": {
-                "url": "https://usa-spending-grants-mcp-server-responsive-reedbuck-xa.app.cloud.gov/mcp", 
+                "url": "https://usa-spending-grants-mcp-server-exhausted-gerenuk-jb.app.cloud.gov/mcp", 
                 "transport": "http"
             }
         }
