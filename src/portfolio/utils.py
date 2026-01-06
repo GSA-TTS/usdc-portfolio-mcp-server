@@ -15,7 +15,7 @@ def mount_servers(mcp):
     config = {
         "mcpServers": {
             "reporter": {
-                "url": "https://nih-reporter-mcp-server-relaxed-bilby-co.app.cloud.gov/mcp",
+                "url": "https://nih-reporter-mcp-server-turbulent-impala-zh.app.cloud.gov/mcp",
                 "transport": "http"
             },
             "usa-spending": {
